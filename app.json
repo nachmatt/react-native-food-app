@@ -1,12 +1,61 @@
 {
   "expo": {
-    "name": "blank",
-    "slug": "blank",
+    "name": "Foodie",
+    "slug": "foodie",
     "version": "1.0.0",
     "platforms": [
       "ios",
       "android",
       "web"
-    ]
+    ],
+    "icon": "./assets/images/food-icon.jpg",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "bundleIdentifier": "com.foodieapp.places",
+      "buildNumber": "1.0.0",
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "com.foodieapp.places",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/food-icon.jpg",
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": [
+        "ACCES_FINE_LOCATION",
+        "WRITE_EXTERNAL_STORAGE"
+      ],
+      "config": {
+        "firebase": {
+          "apiKey": "AIzaSyAv4GFNHHr-kiapjlx2pyt2-xTpUsiQRns"
+        },
+        "googlePlaces": {
+          "apiKey": "AIzaSyBbLIB4eSNtTDSeZX_X4WQ0r53rchXkWT0"
+        },
+        "yelp": {
+          "apiKey": "wte0unfzd8GqGhPz4Pkcqcv9t60qQYev1oOx7v3FQD_hO5qUp5rwXdziz_Zl0vwW4gJi0cNz8PyqyvWsA9p3R_AIowAClwieFmWVuk_qy6x6EIo_anc24guGKhIiZHYx"
+        }
+      }
+    },
+    "web": {
+      "favicon": "./assets/images/food-icon.jpg"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "a06f87f4-8118-4a07-8f9a-a2c532170a33"
+      }
+    },
+    "owner": "nech"
   }
 }
