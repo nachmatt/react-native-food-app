@@ -4,7 +4,6 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 
 const RestaurantItems = ({restaurantData, navigation}) => {
     return (
-        // Ver el tema TouchableOpacity
         <>
             {/* utilizo un .map() en éste caso en lugar de un Flatlist porque no se puede tener un Flatlist vertical dentro de un Scrollview vertical. */}
             {/* la alternativa sería tener un Flatlist dentro de otro Flatlist pero no puedo porque necesito que Categories sea scrolleable pero no se repita */}

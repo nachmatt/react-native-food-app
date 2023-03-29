@@ -2,14 +2,15 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 
-const BottomTabs = () => {
+const BottomTabs = ({navigation}) => {
     return (
         <View style={styles.container}>
-            <Icon icon='ios-home' text='Inicio'/>
-            <Icon icon='ios-search' text='Buscar'/>
-            <Icon icon='ios-gift' text='Tienda'/>
-            <Icon icon='ios-reader' text='Ordenes'/>
-            <Icon icon='ios-person' text='Cuenta'/>
+            <TouchableOpacity onPress={() => navigation.navigate('Home')}>
+                <Icon icon='ios-home' text='Inicio' nav='Home'/>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('OrderCompleted')}>
+                <Icon icon='ios-gift' text='Ordenes' nav='OrderCompleted'/>
+            </TouchableOpacity>
         </View>
     )
 }
@@ -17,7 +18,6 @@ const BottomTabs = () => {
 export default BottomTabs
 
 const Icon = ({icon, text}) => (
-    <TouchableOpacity>
         <View>
             <Ionicons 
                 name={icon} 
@@ -30,7 +30,6 @@ const Icon = ({icon, text}) => (
             />
             <Text>{text}</Text>
         </View>
-    </TouchableOpacity>
 )
 
 const styles = StyleSheet.create({
@@ -38,6 +37,6 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         margin: 10, 
         marginHorizontal: 30,
-        justifyContent: 'space-between'
+        justifyContent: 'space-evenly'
     }
 })
